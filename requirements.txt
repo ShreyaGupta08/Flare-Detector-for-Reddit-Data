@@ -134,7 +134,6 @@ QtPy==1.9.0
 requests==2.22.0
 rope==0.16.0
 rsa==4.0
-Rtree==0.9.3
 ruamel-yaml==0.15.87
 s3transfer==0.1.13
 scikit-image==0.16.2
