@@ -1,6 +1,6 @@
 # Flare-Detector-for-Reddit-Data
 
-Flair detector is a web application, deployed using Heroku. The application can be seen [here](). It scrapes post's using the URL and then uses an SVC model to predict the flair of that post
+Flair detector is a web application, deployed using Heroku. The application can be seen [here](https://flair-detector-for-reddit.herokuapp.com). It scrapes post's using the URL and then uses an SVC model to predict the flair of that post
 
 This repository contains the code which performs the following functionalities:
 1. Scrapping posts from Indian Subreddit according to two methods: hottest posts and distributed posts in accordance with flairs
@@ -21,6 +21,7 @@ This repository contains the code which performs the following functionalities:
 - model.py: final model that uses title of the post and random forest to predict its flair.
 - model.pkl: pickled-version of the model which is used to make predictions.
 - requirments.txt: txt file for Heroku to download the required requirements to run the web application.
+- Experimental log.ipynb: Documents everything that worked or failed on a day per day basis. (for personal use) 
 
 ## How to run this code in your local machine
 
@@ -69,7 +70,7 @@ pip3 install -r requirements.txt
 5. Copy paste the jupyter notebooks from Jupyter Notebooks folder in the Dataset folder using the following command:
 
 ```bash
-cp -R Jupyter Notebooks/ Dataset/
+cp -r Jupyter\ Notebooks/ Dataset/
 ```
 
 6. run the main flask API file, app.py using the following command:
