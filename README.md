@@ -86,6 +86,27 @@ Voila!
 
 P.S. I've also added my experiment log to document everything that worked or failed. 
 
+### Things it is good at:
+- Detailed Documentation
+- prediction for Photography posts (generally)
+
+
+### Things it is bad at:
+- Prediction. I realised it a little late that the 71% accuracy in using title as feature (and Random Forest as learning algorithm) is achieved because the title contained the flair in most cases. This was weird and has been mentioned in better detail in the Experimental log.ipynb file. Time remaining, I would have liked to find a way to:
+    - incorporate comments, content and title with the title (and dealing with NaNs appropriately)
+    - Used better learning algorithms
+    - collected more data.
+
+
+### Things I would like to incorporate:
+
+In data exploration:
+- finding the number of posts in each flair for which content != None
+    - finding the correlation between individual flair confusion matrix obtained from using content only with the number of samples obtained above 
+    - verifying if the unequal distribution is one of the reasons behind the low flair accuracy. if yes, checking if increasing the number of sample distribution had any effect on prediction scores. Then maybe, content would not have been as useless after all. 
+    
+- contrasting performance with unsupervised algorithms (like K-Means)
+- Find flair-wise accuracy
 
 
 
