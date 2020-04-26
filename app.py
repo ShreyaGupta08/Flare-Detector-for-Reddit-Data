@@ -54,25 +54,25 @@ def transformText(rawText):
 
 @app.route('/predict', methods=['POST'])
 def predict():
-	reddit = praw.Reddit(client_id='', client_secret=' ', user_agent=' ', password=' ', username=' ')
+    reddit = praw.Reddit(client_id='', client_secret=' ', user_agent=' ', password=' ', username=' ')
 
-	extractedUrl = dict(request.form)
+    extractedUrl = dict(request.form)
 
-	extractedUrl = str(extractedUrl['url'])
+    extractedUrl = str(extractedUrl['url'])
 
 
-	submission = reddit.submission(url=extractedUrl) 
+    submission = reddit.submission(url=extractedUrl) 
 
-	# extract title which is our current feature
+    # extract title which is our current feature
 
-	feature = submission.title 
-	
-	feature = [transformText(feature)]
+    feature = submission.title 
 
-	prediction = model.predict(feature)
+    feature = [transformText(feature)]
 
-	# pass this to the predict page (which is our index page only)
-	return render_template('index.html', prediction_text="Post Flair predicted: {}".format(prediction))
+    prediction = model.predict(feature)
+
+    # pass this to the predict page (which is our index page only)
+    return render_template('index.html', prediction_text="Post Flair predicted: {}".format(prediction))
 
 
 if __name__ == "__main__":

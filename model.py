@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## This notebook pre-processed data and trains different machine learning models
-
-# In[1]:
+# This notebook trains different machine learning models
 
 
 import numpy as np
@@ -11,17 +9,11 @@ import pandas as pd
 import nltk
 import pickle
 
-# In[2]:
-
-
 dataset = pd.read_csv('refinedmorefeaturesDataset.csv')
 dataset.head()
 
 
 # ## Building Model Functions
-
-# In[6]:
-
 
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import TfidfTransformer
@@ -50,9 +42,6 @@ def random_forests(X_train, X_test, y_train, y_test):
 from sklearn.model_selection import train_test_split
 
 
-# In[14]:
-
-
 X = dataset.Title
 y = dataset.Flair
 
@@ -60,7 +49,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random
 
 print("Original dataset size: ", X.shape)
 print("Training dataset size: ", X_train.shape)
-
 
 
 model = random_forests(X_train, X_test, y_train, y_test)

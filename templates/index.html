@@ -3,7 +3,7 @@
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
-  <title>ML API</title>
+  <title>Reddit Flair Predictor</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
@@ -14,15 +14,14 @@
 
 <body>
  <div class="login">
-	<h1>Reddit Flare Predictor</h1>
+	<h1>Reddit Flair Predictor</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="url" placeholder="url" required="required" />
-        <!-- <input type="text" name="test_score" placeholder="Test Score" required="required" /> -->
-		<!-- <input type="text" name="interview_score" placeholder="Interview Score" required="required" /> -->
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    	<input type="text" name="url">
+      <button type="submit" class="btn btn-primary btn-block btn-large">
+        Predict
+      </button>
     </form>
 
    <br>
