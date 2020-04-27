@@ -1,6 +1,6 @@
 # Flare-Detector-for-Reddit-Data
 
-Flair detector is a web application, deployed using Heroku. The application can be seen [here](https://flair-detector-for-reddit.herokuapp.com). It scrapes post's using the URL and then uses an SVC model to predict the flair of that post
+Flair detector is a web application, deployed using Heroku. The application can be seen [here](https://flair-detector-for-reddit.herokuapp.com). It scrapes posts using the URL and then uses a Random Forest model to predict the flair of that post
 
 This repository contains the code which performs the following functionalities:
 1. Scrapping posts from Indian Subreddit according to two methods: hottest posts and distributed posts in accordance with flairs
