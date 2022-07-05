@@ -39,7 +39,7 @@ scikit-learn==0.22.1
 scipy==1.4.1
 seaborn==0.10.0
 tables==3.6.1
-ujson==1.35
+ujson==5.4.0
 unicodecsv==0.14.1
 update-checker==0.16
 urllib3==1.25.8
